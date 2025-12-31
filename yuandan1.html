@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张天赐的元旦祝贺</title>
+    <style>
+        /* 全局基础样式 - 简单易修改 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            /* 允许页面滚动（内容超出视口时自动滚动） */
+            overflow-y: auto;
+            padding-bottom: 50px; /* 底部留白，避免内容贴底 */
+        }
+
+        /* 头部样式 */
+        .header {
+            background: linear-gradient(to right, #ffd166, #ff8e53);
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* 内容容器 - 限制宽度，居中显示，方便书写内容 */
+        .content {
+            max-width: 800px;
+            width: 90%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px; /* 内容块之间的间距 */
+        }
+
+        /* 自定义内容块 - 白色背景，阴影效果，美观易读 */
+        .content-block {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .content-block h2 {
+            color: #ff8e53;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .content-block p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* 祝福语列表样式（可选，可删除） */
+        .blessing-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .blessing-list li {
+            font-size: 1.1rem;
+            line-height: 2;
+            color: #666;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .blessing-list li::before {
+            content: "🎉";
+            position: absolute;
+            left: 0;
+        }
+
+        /* 响应式适配 - 手机端也友好 */
+        @media (max-width: 576px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .content-block h2 {
+                font-size: 1.5rem;
+            }
+            .content-block p, .blessing-list li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部区域 - 可修改标题和副标题 -->
+    <div class="header">
+        <h1>元旦快乐 🎊</h1>
+        <p>旧岁落幕，新年启章</p>
+    </div>
+
+    <!-- 核心内容区域 - 可在此处自由书写HTML内容，支持滚动 -->
+    <div class="content">
+        <!-- 内容块1：新年寄语（可修改/删除/新增） -->
+        <div class="content-block">
+            <h2>我的新年寄语</h2>
+            <pre>又是一个欢庆的岁月，又是一段怀念的时光!
+新的一年祝大家健康快乐，心想事成。</pre>
+            <pre>虽然我远在淮南市，但我的心一直念着也不是很远的家乡，
+这个元旦不能回家，就在网络上祝你们元旦快乐</pre>
+            <p></p>
+        </div>
+
+        <!-- 内容块2：新年祝福列表（可修改/删除/新增） -->
+        <div class="content-block">
+            <h2>元旦祝福清单</h2>
+            <p>给家人，朋友的祝福：</p>
+            <ul class="blessing-list">
+                <li>祝奶奶身体健康，平安顺遂</li>
+                <li>祝爸爸逢凶化吉，龙马精神</li>
+                <li>祝哥哥心想事成，步步高升</li>
+                <li>祝大家新的一年，吉星高照，幸福安康。</li>
+            </ul>
+        </div>
+
+        <!-- 内容块3：自定义区域（可无限新增类似区块） -->
+        <div class="content-block">
+            <h2>想和家人说的话</h2>
+            <pre>我在学校过的很好，不热也不冷，各种生活物资丰富到堆积的程度。
+所以没必要太担心我的生活，就当成是一个旅程，结束我就回家。
+时间过得真的很快，盼着一周一周，一年就这样过去，所以我想人一定要珍惜时间。
+奶奶要保重身体，不要过度劳动，也不要为了小钱去做工之类的，注意保暖。
+身体健康就是我想听到的最好的消息。
+爸爸少喝酒，少抽烟，也要保重身体，多关注身体不适的时候，多事之秋，
+多变之年，凡事要多想。现在形式的发展按天计，哥哥是时代前列的年轻人，
+要多多和他商量，听听他的看法。
+哥哥是我最崇拜的人，很多时候我不一定能做的比他更好，时代的冷寂不是我们可以改变的。
+时代的变化或许也不是一代人能完成的，放眼世界，其实都在坠入死亡，他们做的远不如中国。
+愿摆脱时代的冷气，仍保持一颗星火之心。
+愿大家新的一年事事顺利，平平安安，步步高升。</pre>
+
+        </div>
+
+        <!-- 可继续复制 <div class="content-block"> ... </div> 来新增更多内容块，页面会自动滚动 -->
+    </div>
+</body>
+</html>

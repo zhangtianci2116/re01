@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张天赐</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+        }
+        body{
+            margin: 0;
+            height: 100vh;
+            background-color: aliceblue;
+
+        }
+         /* *{
+            border: 1px solid black;
+        }  */
+
+        .flex{
+            display: flex;
+
+        }
+        /* 搜索栏样式 */
+        .sosuo{
+            display: flex;
+            align-items: center;
+            max-width: 600px;
+            margin: 0 auto 20px; 
+        }
+        /*搜索框*/
+        .shosuo-kuang{
+            flex: 1;
+            height: 36px;
+            padding: 0 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+             outline: none;
+        }
+        .sosuo-bin{
+            width: 60px;
+            height: 36px;
+            background-color: #333;
+            color: #ddd;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            cursor: pointer;
+
+        }
+        .sosuo-bin:hover{
+             background-color: #555;
+        }
+        .baise{
+            background-color: white;
+        }
+        .flex1{
+            flex: 1;
+        }
+        .column{
+            flex-direction: column;
+        }
+        .mg8{
+            margin: 8px;
+
+        }
+        .mgr8{
+            margin-right: 8px;
+        }
+        .mgt8{
+            margin-top: 8px;
+        }
+        .yingyin{
+             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+         /* 响应式适配（手机端） */
+        @media (max-width: 600px) {
+            .ceBian {
+                display: none;
+            }
+
+            .neiRong {
+                flex-direction: column;
+            }
+
+            .shujuqu {
+                flex-direction: column;
+            }
+            .youqu{
+                margin-left: 8px;
+            }
+            .shuju{
+                margin: 0 0 8px;
+                flex: auto;
+            }
+             .card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+        .neiRong::-webkit-scrollbar{
+            display: none;
+        }
+         .bin {color: white;
+              background-color: #3498db;
+            padding: 12px 30px;
+            display: inline-block;/*这是设计卡片和按钮的显示代码*/
+            text-decoration: none;/*这是去除文字下划线*/
+            border-radius: 50px;  /*这是设计圆角，px越大越接近正圆*/
+            font-size: 16px;
+            font-weight: 500;/*这是文字粗细的控制，越大越粗*/
+            transition: all 0.3s ease;/*切换动画，all表示全类型，0.3是切换时间，ease是动画类型*/
+            box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2);
+            margin: 0 10px;
+            border: none; /*去除边框*/
+        }
+        
+        .bin:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);/*鼠标接触时上移，模拟交互感*/
+             box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2), 0 2px 8px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: #2ecc71;
+        }
+
+        .btn-secondary:hover {
+            background-color: #27ae60;
+        }
+        .daohang{
+           padding: 10px 20px;
+            font-size: 20px;
+            border-bottom: 1px solid #999;
+            color: #666;
+
+        }
+         .card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+        .card:hover{
+            transform: translateY(-10px);
+        }
+
+
+    </style>
+</head>
+<body class="flex">
+    <!--这是侧边栏-->
+    <div style="width: 200px;z-index: 2;"class="ceBian baise yingyin">
+        <!--这是头像栏-->
+        <div style="padding: 10px;justify-content: center;align-items: center;border-bottom: 1px solid #999;" class="flex">
+              <img src="./1743177933028.bmp" alt="张天赐" width="40px" height="40px">
+              <div style="margin-left: 10px;">张天赐</div>
+
+        </div>
+        <!--这是导航栏-->
+        <div>
+            <div class="daohang">
+                <a class="bin" href="https://www.acggw.me/game">游戏游戏</a>
+            </div>
+            <div class="daohang">
+                <a class="bin" href="https://www.doubao.com/chat/">豆包问答</a>
+            </div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+        </div>
+    </div>
+    <!--这是主体-->
+    <div class="flex1 flex column">
+         <!--这是头部栏-->
+         <div style="height: 60px;z-index: 1;background-color: #f9f0ff"class=" yingyin mg8">
+            <!--这是搜索栏-->
+            <div class="sosuo">
+                <input type="text"
+                class="shosuo-kuang"
+                id="shosuokuang"
+                placeholder="请输入关键词搜索"> 
+                <button class="sosuo-bin" id="sosuobin">搜索</button>
+            </div>
+         </div>
+         <!--这是内容区-->
+         <div style="overflow: auto;" class="flex1 flex neiRong">
+             <!--这是左区-->
+             <div style="flex: 3;" class="flex column mg8">
+                <!--数据区-->
+                <div class="flex shujuqu">
+                    <!--数据块-->
+                    <div style="height: 100px;"class="shuju flex1 baise yingyin  mgr8 card">
+                        <a style="text-decoration: none;color: brown;" href="./我的元旦祝贺网页.html"><h3>我的收获</h3>
+                            <pre style="color: black;">这是我从九月到1月初的收获，
+包括学校的收获和其他的收获，
+包含着我的感悟。                                
+                            </pre>
+                        </a>
+                
+                    </div>
+                    <div style="height: 100px;"class="shuju flex1 baise yingyin  mgr8 card">
+                        <a style="text-decoration: none;color: brown;" href=""><h3>我的日常</h3>
+                            <pre style="color: black;">这是我的日常，只有很少的部分。
+因为这个网站是我12月末写的，
+你懂的。                                
+                            </pre>
+                    </div>
+                    <div style="height: 100px;"class="shuju flex1 baise yingyin  mgr8 card">
+                        <a style="text-decoration: none;color: brown;" href="./我的元旦祝贺网页.html"><h3>我的元旦祝福</h3>
+                            <pre style="color: black;">这是我2026年的元旦祝福，
+在完成列表之前先放在这。
+                                
+                            </pre>
+                    </div>
+                    <div style="height: 100px;"class="shuju flex1 baise yingyin card">
+                         <a style="text-decoration: none;color: brown;" href=""><h3>凑数凑数</h3>
+                            <pre style="color: black;">想不出来写什么，就这样凑数吧
+                                
+                            </pre>
+                    </div>
+                </div>
+                <!--列表区-->
+                <div class="flex column">
+                    <!--列表项-->
+                    <div style="height: 160px;"class=" baise yingyin mgt8"></div>
+                    <div style="height: 160px;"class=" baise yingyin mgt8"></div>
+                    <div style="height: 160px;"class=" baise yingyin mgt8"></div>
+                    <div style="height: 160px;"class=" baise yingyin mgt8"></div>
+                    <div style="height: 160px;"class=" baise yingyin mgt8"></div>
+                </div>
+             </div>
+             <!--这是右区区-->
+             <div style="flex: 1;"class="youqu flex column mgt8 mgr8">
+                <!--提示区-->
+                <div style="height: 150px;"class="baise yingyin"></div>
+                <!--消息区-->
+                <div style="height: 300px;"class="baise yingyin mgt8"></div>
+             </div>
+         </div>
+    </div>
+</body>
+</html>
